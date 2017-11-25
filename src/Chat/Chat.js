@@ -17,9 +17,9 @@ class Chat extends Component {
     }
     componentWillMount() {
         this.setState({ username: localStorage.username });
-        this.pusher = new Pusher('APP_KEY', {
+        this.pusher = new Pusher('c171a23cb5bf8870d60f', {
             authEndpoint: '/pusher/auth',
-            cluster: 'YOUR CLUSTER',
+            cluster: 'eu',
             encrypted: true
         });
         this.chatRoom = this.pusher.subscribe('private-reactchat');
